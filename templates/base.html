@@ -1,0 +1,1238 @@
+<html class="no-js" lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Apexa - Business Consulting HTML Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/odometer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-css/iransans.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-css/aviny.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts') }}">
+    
+    <script src="{{ url_for('static', filename='js') }}"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="loader" class="loader">
+            <div class="loader-container">
+                <div class="loader-icon">
+                    <img src="{{ url_for('static', filename='img/logo/preloader.png') }}" alt="Preloader">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="scroll__top scroll-to-target" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <div class="offCanvas__overly"></div>
+    <header class="transparent-header">
+        <div class="tg-header__top">
+            <div class="container custom-container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="tg-header__top-info left-side list-wrap">
+                            <li class="ltr"><i class="flaticon-phone-call"></i><a href="tel:0123456789">+989122187891</a></li>
+                            <li><i class="flaticon-pin"></i>تهران پلاک یک </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="tg-header__top-right list-wrap">
+                            <li><i class="flaticon-envelope"></i><a href="mailto:info@test.com">siamak.rahi@yahoo.com</a></li>
+                            <li><i class="flaticon-time"></i>شنبه - جمعه: 10:صبح- 09:00 شب</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sticky-header" class="tg-header__area"> <div class="container custom-container"> 
+            <div class="row"> 
+                <div class="col-12"> 
+                    <div class="tgmenu__wrap"> 
+                        <nav class="tgmenu__nav"> 
+                            <div class="logo"> <a href=''><img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="Logo"></a> </div> 
+                            <div class="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex"> 
+                                <ul class="navigation"> 
+                                    <li ><a href="{{ url_for('home') }}">درباره ما</a> </li>
+                                    <li ><a href="{{ url_for('about') }}">درباره ما</a> </li> 
+                                    <li ><a href="{{ url_for('service') }}">خدمات ما</a> </li> 
+                                    <li ><a href="{{ url_for('team') }}">تیم ها</a> </li> 
+                                    <li ><a href="{{ url_for('blog') }}">وبلاگ</a> </li> 
+                                    <li ><a href="{{ url_for('contact') }}">تماس با ما</a></li> 
+                                </ul> 
+                            </div> 
+                            <div class="tgmenu__action d-none d-md-block"> 
+                                <ul class="list-wrap"> 
+                                    <li class="header-search"> 
+                                        <a href="javascript:void(0)" class="search-open-btn"> 
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"> 
+                                                <path d="M19 19.0002L14.657 14.6572M14.657 14.6572C15.3999 13.9143 15.9892 13.0324 16.3912 12.0618C16.7933 11.0911 17.0002 10.0508 17.0002 9.00021C17.0002 7.9496 16.7933 6.90929 16.3913 5.93866C15.9892 4.96803 15.3999 4.08609 14.657 3.34321C13.9141 2.60032 13.0322 2.01103 12.0616 1.60898C11.0909 1.20693 10.0506 1 9.00002 1C7.94942 1 6.90911 1.20693 5.93848 1.60898C4.96785 2.01103 4.08591 2.60032 3.34302 3.34321C1.84269 4.84354 0.999817 6.87842 0.999817 9.00021C0.999817 11.122 1.84269 13.1569 3.34302 14.6572C4.84335 16.1575 6.87824 17.0004 9.00002 17.0004C11.1218 17.0004 13.1567 16.1575 14.657 14.6572Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> 
+                                            </svg> 
+                                        </a> 
+                                    </li> 
+                                    <li class="offCanvas-menu"> 
+                                        <a href="javascript:void(0)" class="menu-tigger"> 
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none"> 
+                                                <path d="M0 2C0 0.895431 0.895431 0 2 0C3.10457 0 4 0.895431 4 2C4 3.10457 3.10457 4 2 4C0.895431 4 0 3.10457 0 2Z" fill="currentcolor" /> 
+                                                <path d="M0 9C0 7.89543 0.895431 7 2 7C3.10457 7 4 7.89543 4 9C4 10.1046 3.10457 11 2 11C0.895431 11 0 10.1046 0 9Z" fill="currentcolor" /> 
+                                                <path d="M0 16C0 14.8954 0.895431 14 2 14C3.10457 14 4 14.8954 4 16C4 17.1046 3.10457 18 2 18C0.895431 18 0 17.1046 0 16Z" fill="currentcolor" /> 
+                                                <path d="M7 2C7 0.895431 7.89543 0 9 0C10.1046 0 11 0.895431 11 2C11 3.10457 10.1046 4 9 4C7.89543 4 7 3.10457 7 2Z" fill="currentcolor" /> 
+                                                <path d="M7 9C7 7.89543 7.89543 7 9 7C10.1046 7 11 7.89543 11 9C11 10.1046 10.1046 11 9 11C7.89543 11 7 10.1046 7 9Z" fill="currentcolor" /> 
+                                                <path d="M7 16C7 14.8954 7.89543 14 9 14C10.1046 14 11 14.8954 11 16C11 17.1046 10.1046 18 9 18C7.89543 18 7 17.1046 7 16Z" fill="currentcolor" /> 
+                                                <path d="M14 2C14 0.895431 14.8954 0 16 0C17.1046 0 18 0.895431 18 2C18 3.10457 17.1046 4 16 4C14.8954 4 14 3.10457 14 2Z" fill="currentcolor" /> 
+                                                <path d="M14 9C14 7.89543 14.8954 7 16 7C17.1046 7 18 7.89543 18 9C18 10.1046 17.1046 11 16 11C14.8954 11 14 10.1046 14 9Z" fill="currentcolor" /> 
+                                                <path d="M14 16C14 14.8954 14.8954 14 16 14C17.1046 14 18 14.8954 18 16C18 17.1046 17.1046 18 16 18C14.8954 18 14 17.1046 14 16Z" fill="currentcolor" /> 
+                                            </svg> 
+                                        </a> 
+                                    </li> 
+                                    <li class="header-btn"><a class='btn' href="{{ url_for('contact') }}">ارتباط با ما</a>
+                                    </li> 
+                                </ul> 
+                            </div> 
+                                <div class="mobile-nav-toggler"> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none"> 
+                                        <path d="M0 2C0 0.895431 0.895431 0 2 0C3.10457 0 4 0.895431 4 2C4 3.10457 3.10457 4 2 4C0.895431 4 0 3.10457 0 2Z" fill="currentcolor" /> 
+                                        <path d="M0 9C0 7.89543 0.895431 7 2 7C3.10457 7 4 7.89543 4 9C4 10.1046 3.10457 11 2 11C0.895431 11 0 10.1046 0 9Z" fill="currentcolor" /> 
+                                        <path d="M0 16C0 14.8954 0.895431 14 2 14C3.10457 14 4 14.8954 4 16C4 17.1046 3.10457 18 2 18C0.895431 18 0 17.1046 0 16Z" fill="currentcolor" /> 
+                                        <path d="M7 2C7 0.895431 7.89543 0 9 0C10.1046 0 11 0.895431 11 2C11 3.10457 10.1046 4 9 4C7.89543 4 7 3.10457 7 2Z" fill="currentcolor" /> 
+                                        <path d="M7 9C7 7.89543 7.89543 7 9 7C10.1046 7 11 7.89543 11 9C11 10.1046 10.1046 11 9 11C7.89543 11 7 10.1046 7 9Z" fill="currentcolor" /> 
+                                        <path d="M7 16C7 14.8954 7.89543 14 9 14C10.1046 14 11 14.8954 11 16C11 17.1046 10.1046 18 9 18C7.89543 18 7 17.1046 7 16Z" fill="currentcolor" /> 
+                                        <path d="M14 2C14 0.895431 14.8954 0 16 0C17.1046 0 18 0.895431 18 2C18 3.10457 17.1046 4 16 4C14.8954 4 14 3.10457 14 2Z" fill="currentcolor" /> 
+                                        <path d="M14 9C14 7.89543 14.8954 7 16 7C17.1046 7 18 7.89543 18 9C18 10.1046 17.1046 11 16 11C14.8954 11 14 10.1046 14 9Z" fill="currentcolor" /> 
+                                        <path d="M14 16C14 14.8954 14.8954 14 16 14C17.1046 14 18 14.8954 18 16C18 17.1046 17.1046 18 16 18C14.8954 18 14 17.1046 14 16Z" fill="currentcolor" /> 
+                                    </svg> 
+                                </div> 
+                        </nav> 
+                    </div>
+                        <div class="tgmobile__menu"> 
+                            <nav class="tgmobile__menu-box"> 
+                                <div class="close-btn"><i class="fas fa-times"></i>
+                                </div> 
+                                <div class="nav-logo"> 
+                                    <a href=''><img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="Logo"></a> 
+                                </div> 
+                                <div class="tgmobile__search"> 
+                                    <form action="#"> 
+                                        <input type="text" placeholder="جستجو ..."> 
+                                        <button><i class="fas fa-search"></i></button> 
+                                    </form> 
+                                </div> 
+                                <div class="tgmobile__menu-outer"> 
+                                </div> 
+                                <div class="tgmobile__menu-bottom"> 
+                                    <div class="contact-info"> 
+                                        <ul class="list-wrap"> 
+                                            <li><a href="mailto:info@test.com">siamak.rahi@yahoo.com</a></li> 
+                                            <li><a href="tel:0123456789">+989122187891</a></li> 
+                                        </ul> 
+                                    </div> 
+                                    <div class="social-links"> 
+                                        <ul class="list-wrap"> 
+                                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li> 
+                                            <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li> 
+                                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li> 
+                                            <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li> 
+                                            <li><a href="javascript:void(0)"><i class="fab fa-youtube"></i></a></li> 
+                                        </ul> 
+                                    </div> 
+                                </div> 
+                            </nav> 
+                        </div> 
+                            <div class="tgmobile__menu-backdrop">
+                            </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+        <div class="search__popup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="search__wrapper">
+                            <div class="search__close">
+                                <button type="button" class="search-close-btn">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="search__form">
+                                <form action="#">
+                                    <div class="search__input">
+                                        <input class="search-input-field" type="text" placeholder="جستجو کنید ...">
+                                        <span class="search-focus-border"></span>
+                                        <button>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-popup-overlay"></div>
+        <div class="offCanvas__info">
+            <div class="offCanvas__close-icon menu-close">
+                <button><i class="far fa-window-close"></i></button>
+            </div>
+            <div class="offCanvas__logo mb-30">
+                <a href=''><img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="Logo"></a>
+            </div>
+            <div class="offCanvas__side-info mb-30">
+                <div class="contact-list mb-30">
+                    <h4>آدرس دفتر مرکزی</h4>
+                    <p> تهران پلاک یک<br></p>
+                </div>
+                <div class="contact-list mb-30" style="direction: ltr; text-align: left;">
+                    <h4>شماره تماس</h4>
+                    <p>+989122187891</p>
+                </div>
+            </div>
+            <div class="offCanvas__social-icon mt-30">
+                <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-google-plus-g"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="offCanvas__overly"></div>
+    </header>
+    <main class="fix">
+        <section class="banner-area banner-bg" data-background="{{ url_for('static', filename='img/banner/banner_bg.jpg') }}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="banner-content">
+                            <span class="sub-title" data-aos="fade-up" data-aos-delay="0">ما در این زمینه متخصص هستیم</span>
+                            <h2 class="title" data-aos="fade-up" data-aos-delay="200">مشاوره کسب و کار همه راه حل ها</h2>
+                            <p data-aos="fade-up" data-aos-delay="400">شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.</p>
+                            <a class='btn' data-aos-delay='600' data-aos='fade-up' href='about.html'>مطالعه بیشتر</a>
+                        </div>
+                        <div class="banner-shape">
+                            <img src="{{ url_for('static', filename='img/banner/banner_shape01.png') }}" alt="" class="rightToLeft">
+                            <img src="{{ url_for('static', filename='img/banner/banner_shape02.png') }}" alt="" class="ribbonRotate">
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-social">
+                    <h5 class="title">دنبال کنید</h5>
+                    <ul class="list-wrap">
+                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="banner-scroll">
+                    <a href="#about">برو پایین <span><i class="fas fa-arrow-right"></i></span></a>
+                </div>
+            </div>
+        </section>
+        <div class="brand-area">
+            <div class="container">
+                <div class="swiper-container brand-active">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="{{ url_for('static', filename='img/brand/brand_img01.png') }}" alt="Brand 01">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="{{ url_for('static', filename='img/brand/brand_img02.png') }}" alt="Brand 02">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="{{ url_for('static', filename='img/brand/brand_img03.png') }}" alt="Brand 03">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="{{ url_for('static', filename='img/brand/brand_img04.png') }}" alt="Brand 04">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="{{ url_for('static', filename='img/brand/brand_img05.png') }}" alt="Brand 05">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="{{ url_for('static', filename='img/brand/brand_img06.png') }}" alt="Brand 06">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="{{ url_for('static', filename='img/brand/brand_img03.png') }}" alt="Brand 03">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="about" class="about-area pt-120 pb-120">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img-wrap">
+                            <div class="mask-img-wrap">
+                                <img src="{{ url_for('static', filename='img/images/about_img01.jpg') }}" alt="About Image">
+                            </div>
+                            <div class="shape">
+                                <img src="{{ url_for('static', filename='img/images/about_shape01.png') }}" alt="Shape Image">
+                            </div>
+                            <div class="experience-year">
+                                <div class="icon">
+                                    <i class="flaticon-trophy"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="circle rotateme"></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title mb-35 tg-heading-subheading animation-style3">
+                                <span class="sub-title">درباره ما</span>
+                                <h2 class="title">ما میتوانیم کسب کارتان را گسترش دهیم</h2>
+                            </div>
+                            <div class="about-list">
+                                <ul class="list-wrap">
+                                    <li>
+                                        <div class="icon">
+                                            <i class="flaticon-target"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title">راه حل های کسب و کار</h4>
+                                            <p>متنی برای زندگی بهتر</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="flaticon-profit"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title">کیفیت خدمات</h4>
+                                            <p>در شرف واقعیتی سازنده</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+                            <div class="about-bottom">
+                                <div class="author-wrap">
+                                    <div class="thumb">
+                                        <img src="{{ url_for('static', filename='img/images/author_img.png') }}" alt="Author Image">
+                                    </div>
+                                    <div class="content">
+                                        <img src="{{ url_for('static', filename='img/images/sign.png') }}" alt="Signature">
+                                        <h4 class="title">امین احمدی <span>, سئو</span></h4>
+                                    </div>
+                                </div>
+                                <a class='btn btn-two' href='about.html'>مطالعه بیشتر</a>
+                            </div>
+                            <div class="about-shape-wrap">
+                                <img src="{{ url_for('static', filename='img/images/about_shape03.png') }}" alt="About Shape 03">
+                                <img src="{{ url_for('static', filename='img/images/about_shape04.png') }}" alt="About Shape 04" class="ribbonRotate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-left-shape">
+                <img src="{{ url_for('static', filename='img/images/about_shape02.png') }}" alt="About Shape 02">
+            </div>
+        </section>
+        <section class="services-area services-bg" data-background="assets/img/bg/services_bg.jpg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="section-title text-center mb-40 tg-heading-subheading animation-style3">
+                            <span class="sub-title">آنچه ما ارائه می دهیم</span>
+                            <h2 class="title ">ما راه حل های موثر تجاری در منطقه وسیعی را ارائه می دهیم</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-item-wrap">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div class="services-item shine-animate-item">
+                                <div class="services-thumb">
+                                    <a class='shine-animate' href='services-details.html'><img src="{{ url_for('static', filename='img/services/services_img01.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="services-content">
+                                    <div class="icon">
+                                        <i class="flaticon-profit"></i>
+                                    </div>
+                                    <h4 class="title"><a href='services-details.html'>بازاریابی استراتژیک</a></h4>
+                                    <p>صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                                    <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div class="services-item shine-animate-item">
+                                <div class="services-thumb">
+                                    <a class='shine-animate' href='services-details.html'><img src="{{ url_for('static', filename='img/services/services_img02.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="services-content">
+                                    <div class="icon">
+                                        <i class="flaticon-investment-1"></i>
+                                    </div>
+                                    <h4 class="title"><a href='services-details.html'>برنامه ریزی سرمایه گذاری</a></h4>
+                                    <p>چاپگرها و متون بلکه روزنامه و مجله در ستون.</p>
+                                    <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div class="services-item shine-animate-item">
+                                <div class="services-thumb">
+                                    <a class='shine-animate' href='services-details.html'><img src="{{ url_for('static', filename='img/services/services_img03.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="services-content">
+                                    <div class="icon">
+                                        <i class="flaticon-pie-chart"></i>
+                                    </div>
+                                    <h4 class="title"><a href='services-details.html'>بینش و تجزیه و تحلیل</a></h4>
+                                    <p>نرم افزارها شناخت بیشتری را برای طراحان رایانه.</p>
+                                    <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div class="services-item shine-animate-item">
+                                <div class="services-thumb">
+                                    <a class='shine-animate' href='services-details.html'><img src="{{ url_for('static', filename='img/services/services_img04.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="services-content">
+                                    <div class="icon">
+                                        <i class="flaticon-light-bulb"></i>
+                                    </div>
+                                    <h4 class="title"><a href='services-details.html'>مشاوره کسب و کار</a></h4>
+                                    <p>اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                                    <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-bottom-content">
+                    <p>توانمندسازی مشاغل از طریق مشاوره استراتژیک با ما</p>
+                    <a class='btn' href='services.html'>نمایش همه خدمات</a>
+                </div>
+            </div>
+        </section>
+        <section class="choose-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-0 order-lg-2">
+                        <div class="choose-img-wrap">
+                            <img src="{{ url_for('static', filename='img/images/choose_img01.jpg') }}" alt="Choose Image 01">
+                            <img src="{{ url_for('static', filename='img/images/choose_img02.jpg') }}" alt="Choose Image 02" data-parallax='{"x" : 50 }'>
+                            <img src="{{ url_for('static', filename='img/images/choose_img_shape.png') }}" alt="Choose Shape">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="choose-content">
+                            <div class="section-title white-title mb-30 tg-heading-subheading animation-style3">
+                                <span class="sub-title">چرا ما بهترین هستیم</span>
+                                <h2 class="title">ما بینش کسب و کار را ارائه می‌دهیم <br> مشاوره در کلاس جهانی</h2>
+                            </div>
+                            <p>ما با موفقیت با وظایف پیچیدگی مختلف کنار می‌آییم، تضمین‌های طولانی مدت را فراهم می‌کنیم و به طور مرتب تسلط جدید به دنبال نمونه کارها شامل ده‌ها نفر.</p>
+                            <div class="choose-list">
+                                <ul class="list-wrap">
+                                    <li>
+                                        <div class="icon">
+                                            <i class="flaticon-investment"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title">راه حل‌های تجاری</h4>
+                                            <p>اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="flaticon-investment-1"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title">تحلیل بازار</h4>
+                                            <p>اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="choose-shape-wrap">
+                <img src="{{ url_for('static', filename='img/images/choose_shape01.png') }}" alt="Choose Shape 01" data-aos="fade-right" data-aos-delay="400">
+                <img src="{{ url_for('static', filename='img/images/choose_shape02.png') }}" alt="Choose Shape 02" data-aos="fade-left" data-aos-delay="400">
+            </div>
+        </section>
+        <section class="counter-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="counter-item">
+                            <div class="icon">
+                                <i class="flaticon-trophy"></i>
+                            </div>
+                            <div class="content">
+                                <h2 class="count"><span class="odometer" data-count="45"></span>+</h2>
+                                <p>با موفقیت<br> پروژه‌های تکمیل شده</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="counter-item">
+                            <div class="icon">
+                                <i class="flaticon-happy"></i>
+                            </div>
+                            <div class="content">
+                                <h2 class="count"><span class="odometer" data-count="92"></span>K</h2>
+                                <p>راضی <br> 100٪ مشتری‌های ما</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="counter-item">
+                            <div class="icon">
+                                <i class="flaticon-china"></i>
+                            </div>
+                            <div class="content">
+                                <h2 class="count"><span class="odometer" data-count="19"></span>+</h2>
+                                <p>در سراسر جهان <br> ما در دسترس هستیم</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="counter-item">
+                            <div class="icon">
+                                <i class="flaticon-time"></i>
+                            </div>
+                            <div class="content">
+                                <h2 class="count"><span class="odometer" data-count="25"></span>+</h2>
+                                <p>سال‌ها تجربه <br> برای اداره این شرکت</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="counter-shape-wrap">
+                <img src="{{ url_for('static', filename='img/images/counter_shape01.png') }}" alt="Counter Shape 01" data-aos="fade-right" data-aos-delay="400">
+                <img src="{{ url_for('static', filename='img/images/counter_shape02.png') }}" alt="Counter Shape 02" data-parallax='{"x": 100, "y": -100 }'>
+                <img src="{{ url_for('static', filename='img/images/counter_shape03.png') }}" alt="Counter Shape 03" data-aos="fade-left" data-aos-delay="400">
+            </div>
+        </section>
+        <section class="project-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="section-title text-center mb-50 tg-heading-subheading animation-style3">
+                            <span class="sub-title">پروژه های ما</span>
+                            <h2 class="title ">بیاید همه پروژه های شرکت مارا بررسی کنید.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item-wrap">
+                <div class="container custom-container-two">
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="project-item">
+                                <div class="project-thumb">
+                                    <a href='project-details.html'><img src="{{ url_for('static', filename='img/project/project_img01.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="project-content">
+                                    <div class="left-side-content">
+                                        <h4 class="title"><a href='project-details.html'>مشاوره کسب و کار</a></h4>
+                                        <span>استراتژی کسب و کار</span>
+                                    </div>
+                                    <div class="link-arrow">
+                                        <a href='project-details.html'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6293 3.27957C17.7117 2.80341 17.4427 2.34763 17.0096 2.17812C16.9477 2.15385 16.8824 2.13552 16.8144 2.12376L6.96081 0.419152C6.41654 0.325049 5.89911 0.689856 5.80491 1.23411C5.71079 1.77829 6.07564 2.29578 6.61982 2.38993L14.0946 3.68295L1.36574 12.6573C0.914365 12.9756 0.806424 13.5995 1.12467 14.0509C1.44292 14.5022 2.06682 14.6102 2.51819 14.2919L15.247 5.31753L13.954 12.7923C13.8598 13.3365 14.2247 13.854 14.7689 13.9482C15.3131 14.0422 15.8305 13.6774 15.9248 13.1332L17.6293 3.27957Z" fill="currentcolor" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6293 3.27957C17.7117 2.80341 17.4427 2.34763 17.0096 2.17812C16.9477 2.15385 16.8824 2.13552 16.8144 2.12376L6.96081 0.419152C6.41654 0.325049 5.89911 0.689856 5.80491 1.23411C5.71079 1.77829 6.07564 2.29578 6.61982 2.38993L14.0946 3.68295L1.36574 12.6573C0.914365 12.9756 0.806424 13.5995 1.12467 14.0509C1.44292 14.5022 2.06682 14.6102 2.51819 14.2919L15.247 5.31753L13.954 12.7923C13.8598 13.3365 14.2247 13.854 14.7689 13.9482C15.3131 14.0422 15.8305 13.6774 15.9248 13.1332L17.6293 3.27957Z" fill="currentcolor" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="project-item">
+                                <div class="project-thumb">
+                                    <a href='project-details.html'><img src="{{ url_for('static', filename='img/project/project_img02.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="project-content">
+                                    <div class="left-side-content">
+                                        <h4 class="title"><a href='project-details.html'>آژانس دیجیتال</a></h4>
+                                        <span>خدمات شغلی</span>
+                                    </div>
+                                    <div class="link-arrow">
+                                        <a href='project-details.html'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6293 3.27957C17.7117 2.80341 17.4427 2.34763 17.0096 2.17812C16.9477 2.15385 16.8824 2.13552 16.8144 2.12376L6.96081 0.419152C6.41654 0.325049 5.89911 0.689856 5.80491 1.23411C5.71079 1.77829 6.07564 2.29578 6.61982 2.38993L14.0946 3.68295L1.36574 12.6573C0.914365 12.9756 0.806424 13.5995 1.12467 14.0509C1.44292 14.5022 2.06682 14.6102 2.51819 14.2919L15.247 5.31753L13.954 12.7923C13.8598 13.3365 14.2247 13.854 14.7689 13.9482C15.3131 14.0422 15.8305 13.6774 15.9248 13.1332L17.6293 3.27957Z" fill="currentcolor" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6293 3.27957C17.7117 2.80341 17.4427 2.34763 17.0096 2.17812C16.9477 2.15385 16.8824 2.13552 16.8144 2.12376L6.96081 0.419152C6.41654 0.325049 5.89911 0.689856 5.80491 1.23411C5.71079 1.77829 6.07564 2.29578 6.61982 2.38993L14.0946 3.68295L1.36574 12.6573C0.914365 12.9756 0.806424 13.5995 1.12467 14.0509C1.44292 14.5022 2.06682 14.6102 2.51819 14.2919L15.247 5.31753L13.954 12.7923C13.8598 13.3365 14.2247 13.854 14.7689 13.9482C15.3131 14.0422 15.8305 13.6774 15.9248 13.1332L17.6293 3.27957Z" fill="currentcolor" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="project-item">
+                                <div class="project-thumb">
+                                    <a href='project-details.html'><img src="{{ url_for('static', filename='img/project/project_img03.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="project-content">
+                                    <div class="left-side-content">
+                                        <h4 class="title"><a href='project-details.html'>مدیریت موجودی</a></h4>
+                                        <span>ردیابی موجودی</span>
+                                    </div>
+                                    <div class="link-arrow">
+                                        <a href='project-details.html'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6293 3.27957C17.7117 2.80341 17.4427 2.34763 17.0096 2.17812C16.9477 2.15385 16.8824 2.13552 16.8144 2.12376L6.96081 0.419152C6.41654 0.325049 5.89911 0.689856 5.80491 1.23411C5.71079 1.77829 6.07564 2.29578 6.61982 2.38993L14.0946 3.68295L1.36574 12.6573C0.914365 12.9756 0.806424 13.5995 1.12467 14.0509C1.44292 14.5022 2.06682 14.6102 2.51819 14.2919L15.247 5.31753L13.954 12.7923C13.8598 13.3365 14.2247 13.854 14.7689 13.9482C15.3131 14.0422 15.8305 13.6774 15.9248 13.1332L17.6293 3.27957Z" fill="currentcolor" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6293 3.27957C17.7117 2.80341 17.4427 2.34763 17.0096 2.17812C16.9477 2.15385 16.8824 2.13552 16.8144 2.12376L6.96081 0.419152C6.41654 0.325049 5.89911 0.689856 5.80491 1.23411C5.71079 1.77829 6.07564 2.29578 6.61982 2.38993L14.0946 3.68295L1.36574 12.6573C0.914365 12.9756 0.806424 13.5995 1.12467 14.0509C1.44292 14.5022 2.06682 14.6102 2.51819 14.2919L15.247 5.31753L13.954 12.7923C13.8598 13.3365 14.2247 13.854 14.7689 13.9482C15.3131 14.0422 15.8305 13.6774 15.9248 13.1332L17.6293 3.27957Z" fill="currentcolor" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="project-item">
+                                <div class="project-thumb">
+                                    <a href='project-details.html'><img src="{{ url_for('static', filename='img/project/project_img04.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="project-content">
+                                    <div class="left-side-content">
+                                        <h4 class="title"><a href='project-details.html'>حسابداری</a></h4>
+                                        <span>مدیریت تأمین مالی</span>
+                                    </div>
+                                    <div class="link-arrow">
+                                        <a href='project-details.html'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6293 3.27957C17.7117 2.80341 17.4427 2.34763 17.0096 2.17812C16.9477 2.15385 16.8824 2.13552 16.8144 2.12376L6.96081 0.419152C6.41654 0.325049 5.89911 0.689856 5.80491 1.23411C5.71079 1.77829 6.07564 2.29578 6.61982 2.38993L14.0946 3.68295L1.36574 12.6573C0.914365 12.9756 0.806424 13.5995 1.12467 14.0509C1.44292 14.5022 2.06682 14.6102 2.51819 14.2919L15.247 5.31753L13.954 12.7923C13.8598 13.3365 14.2247 13.854 14.7689 13.9482C15.3131 14.0422 15.8305 13.6774 15.9248 13.1332L17.6293 3.27957Z" fill="currentcolor" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6293 3.27957C17.7117 2.80341 17.4427 2.34763 17.0096 2.17812C16.9477 2.15385 16.8824 2.13552 16.8144 2.12376L6.96081 0.419152C6.41654 0.325049 5.89911 0.689856 5.80491 1.23411C5.71079 1.77829 6.07564 2.29578 6.61982 2.38993L14.0946 3.68295L1.36574 12.6573C0.914365 12.9756 0.806424 13.5995 1.12467 14.0509C1.44292 14.5022 2.06682 14.6102 2.51819 14.2919L15.247 5.31753L13.954 12.7923C13.8598 13.3365 14.2247 13.854 14.7689 13.9482C15.3131 14.0422 15.8305 13.6774 15.9248 13.1332L17.6293 3.27957Z" fill="currentcolor" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="project-content-bottom">
+                                <p>ما با موفقیت به وظایف پیچیده کنار می آییم, <br> تضمین های بلند مدت و به طور مرتب ارائه دهیم</p>
+                                <a class='btn' href='project-details.html'>همه پروژه ها را ببینید</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-shape-wrap">
+                <img src="{{ url_for('static', filename='img/project/project_shape01.png') }}" alt="" class="alltuchtopdown">
+                <img src="{{ url_for('static', filename='img/project/project_shape02.png') }}" alt="" class="rotateme">
+            </div>
+        </section>
+        <section class="request-area request-bg" data-background="{{ url_for('static', filename='img/bg/request_bg.jpg') }}">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="request-content text-center tg-heading-subheading animation-style3">
+                            <h2 class="title">ارائه بهترین تجربه خدمات مشاوره تجاری</h2>
+                            <div class="content-bottom">
+                                <a href="tel:0123456789" class="btn">درخواست تماس رایگان</a>
+                                <div class="content-right">
+                                    <div class="icon">
+                                        <i class="flaticon-phone-call"></i>
+                                    </div>
+                                    <div class="content">
+                                        <span>تماس تلفنی </span>
+                                        <a href="tel:0123456789">+989122187891</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="request-shape">
+                <img src="{{ url_for('static', filename='img/images/request_shape01.png') }}" alt="Request Shape 01" data-aos="fade-right" data-aos-delay="400">
+                <img src="{{ url_for('static', filename='img/images/request_shape02.png') }}" alt="Request Shape 02" data-aos="fade-left" data-aos-delay="400">
+            </div>
+        </section>
+        <section class="team-area pt-120 pb-90">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="section-title mb-40 tg-heading-subheading animation-style3">
+                            <span class="sub-title">با تیم ما ملاقات کنید</span>
+                            <h2 class="title">اعضای تیم ما متخصص حوزه خود هستند<br>می‌توانید اعتماد کنید!</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="section-content">
+                            <p>قدرت انتخاب ما غیرقابل تحقق است و وقتی هیچ چیز مانع از انجام هر کاری نمی‌شود که بتوانیم کاری را انجام دهیم.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item-wrap">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div class="team-item">
+                                <div class="team-thumb">
+                                    <img src="{{ url_for('static', filename='img/team/team_img01.jpg') }}" alt="Team Member 1">
+                                    <div class="team-social">
+                                        <div class="social-toggle-icon">
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                        <ul class="list-wrap">
+                                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="team-content">
+                                    <h4 class="title"><a href='team-details.html'>جون کوپر</a></h4>
+                                    <span>مشاور مالی</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div class="team-item">
+                                <div class="team-thumb">
+                                    <img src="{{ url_for('static', filename='img/team/team_img02.jpg') }}" alt="Team Member 2">
+                                    <div class="team-social">
+                                        <div class="social-toggle-icon">
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                        <ul class="list-wrap">
+                                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="team-content">
+                                    <h4 class="title"><a href='team-details.html'>ایلنور پنا</a></h4>
+                                    <span>مشاور مالی</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div class="team-item">
+                                <div class="team-thumb">
+                                    <img src="{{ url_for('static', filename='img/team/team_img03.jpg') }}" alt="Team Member 3">
+                                    <div class="team-social">
+                                        <div class="social-toggle-icon">
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                        <ul class="list-wrap">
+                                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="team-content">
+                                    <h4 class="title"><a href='team-details.html'>فلوید مایلز</a></h4>
+                                    <span>مشاور مالی</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                            <div class="team-item">
+                                <div class="team-thumb">
+                                    <img src="{{ url_for('static', filename='img/team/team_img04.jpg') }}" alt="Team Member 4">
+                                    <div class="team-social">
+                                        <div class="social-toggle-icon">
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                        <ul class="list-wrap">
+                                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="team-content">
+                                    <h4 class="title"><a href='team-details.html'>رالف ادواردز</a></h4>
+                                    <span>مشاور مالی</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <section class="consulting-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="consulting-inner-wrap shine-animate-item">
+                            <div class="consulting-content">
+                                <div class="content-left">
+                                    <h2 class="title">40+</h2>
+                                    <span>کارشناس <br> مشاوره</span>
+                                </div>
+                                <div class="content-right">
+                                    <h2 class="title">مشاغل قابل اعتماد، خوشحال و راضی</h2>
+                                    <p>وقتی با راه‌حل‌های درست کار می‌کنید، بهترین نتیجه را می‌گیرید. ما راه‌حل‌های سازگار ارائه می‌دهیم که به شما امکان می‌دهد بخشی از کل فرآیند باشید.</p>
+                                </div>
+                            </div>
+                            <div class="consulting-img shine-animate">
+                                <img src="{{ url_for('static', filename='img/images/consulting_img.jpg') }}" alt="Consulting Image">
+                            </div>
+                            <div class="consulting-shape">
+                                <img src="{{ url_for('static', filename='img/images/consulting_shape.png') }}" alt="Consulting Shape">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+        <section class="testimonial-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 order-0 order-lg-2">
+                        <div class="swiper-container testimonial-active">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-info">
+                                            <h4 class="title">رابی الکس</h4>
+                                            <span>سئو - دیجیتال مارکتینگ</span>
+                                        </div>
+                                        <div class="testimonial__rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <p>“لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.”</p>
+                                            <div class="icon"><i class="fas fa-quote-right"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-info">
+                                            <h4 class="title">رابی الکس</h4>
+                                            <span>سئو - دیجیتال مارکتینگ</span>
+                                        </div>
+                                        <div class="testimonial__rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <p>“لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.”</p>
+                                            <div class="icon"><i class="fas fa-quote-right"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-info">
+                                            <h4 class="title">رابی الکس</h4>
+                                            <span>سئو - دیجیتال مارکتینگ</span>
+                                        </div>
+                                        <div class="testimonial__rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <p>“لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.”</p>
+                                            <div class="icon"><i class="fas fa-quote-right"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-info">
+                                            <h4 class="title">رابی الکس</h4>
+                                            <span>سئو - دیجیتال مارکتینگ</span>
+                                        </div>
+                                        <div class="testimonial__rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <p>“لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.”</p>
+                                            <div class="icon"><i class="fas fa-quote-right"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slider-dot">
+                            <div class="swiper testimonial-nav">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button><img src="{{ url_for('static', filename='img/images/testi_avatar01.png') }}" alt="Testimonial Avatar 01"></button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button><img src="{{ url_for('static', filename='img/images/testi_avatar02.png') }}" alt="Testimonial Avatar 02"></button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button><img src="{{ url_for('static', filename='img/images/testi_avatar03.png') }}" alt="Testimonial Avatar 03"></button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button><img src="{{ url_for('static', filename='img/images/testi_avatar04.png') }}" alt="Testimonial Avatar 04"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-lg-6 col-md-8">
+                        <div class="testimonial-img-wrap">
+                            <img src="{{ url_for('static', filename='img/images/testimonial_img.png') }}" alt="Testimonial Image">
+                            <div class="img-shape">
+                                <img src="{{ url_for('static', filename='img/images/testimonial_shape01.png') }}" alt="Testimonial Shape 01">
+                                <img src="{{ url_for('static', filename='img/images/testimonial_shape02.png') }}" alt="Testimonial Shape 02" class="alltuchtopdown">
+                                <img src="{{ url_for('static', filename='img/images/testimonial_shape03.png') }}" alt="Testimonial Shape 03" data-parallax='{"y": 80 }'>
+                                <img src="{{ url_for('static', filename='img/images/testimonial_shape04.png') }}" alt="Testimonial Shape 04" class="rightToLeft">
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="testimonial-shape-wrap">
+                <img src="{{ url_for('static', filename='img/images/testimonial_shape05.png') }}" alt="Testimonial Shape 05" data-aos="fade-up" data-aos-delay="400">
+                <img src="{{ url_for('static', filename='img/images/testimonial_shape06.png') }}" alt="Testimonial Shape 06" data-aos="fade-left" data-aos-delay="400">
+            </div>            
+        </section>
+        <section class="blog-post-area blog-post-bg" data-background="assets/img/bg/blog_post_bg.jpg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title text-center mb-40 tg-heading-subheading animation-style3">
+                            <span class="sub-title">جدترین مطالب وبلاگ ما</span>
+                            <h2 class="title ">اخبار و مقالات برجسته</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-6 col-md-10">
+                        <div class="blog-post-item shine-animate-item">
+                            <div class="blog-post-thumb">
+                                <a class='shine-animate' href='blog-details.html'><img src="{{ url_for('static', filename='img/blog/blog_post01.jpg') }}" alt=""></a>
+                                <a class='post-tag' href='blog.html'>کسب و کار</a>
+                            </div>
+                            <div class="blog-post-content">
+                                <h2 class="title"><a href='blog-details.html'>بهترین راهای افزایش درامد</a></h2>
+                                <div class="blog-avatar">
+                                    <div class="avatar-thumb">
+                                        <img src="{{ url_for('static', filename='img/blog/blog_avatar01.png') }}" alt="">
+                                    </div>
+                                    <div class="avatar-content">
+                                        <p>توسط <a href='blog-details.html'>دومین اسمیت</a></p>
+                                    </div>
+                                </div>
+                                <div class="blog-post-meta">
+                                    <ul class="list-wrap">
+                                        <li>
+                                            <a class='btn' href='blog-details.html'>مطالع بیشتر</a>
+                                        </li>
+                                        <li><i class="fas fa-calendar-alt"></i>21 مهر 1403</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-10">
+                        <div class="blog-post-item shine-animate-item">
+                            <div class="blog-post-thumb">
+                                <a class='shine-animate' href='blog-details.html'><img src="{{ url_for('static', filename='img/blog/blog_post02.jpg') }}" alt=""></a>
+                                <a class='post-tag' href='blog.html'>حسابرسی</a>
+                            </div>
+                            <div class="blog-post-content">
+                                <h2 class="title"><a href='blog-details.html'>برترین مطالب قرن اخیر</a></h2>
+                                <div class="blog-avatar">
+                                    <div class="avatar-thumb">
+                                        <img src="{{ url_for('static', filename='img/blog/blog_avatar01.png') }}" alt="">
+                                    </div>
+                                    <div class="avatar-content">
+                                        <p>توسط <a href='blog-details.html'>امین</a></p>
+                                    </div>
+                                </div>
+                                <div class="blog-post-meta">
+                                    <ul class="list-wrap">
+                                        <li>
+                                            <a class='btn' href='blog-details.html'>بیشتر بخوانید</a>
+                                        </li>
+                                        <li><i class="fas fa-calendar-alt"></i>21 مهر 1403</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-10">
+                        <div class="blog-post-item shine-animate-item">
+                            <div class="blog-post-thumb">
+                                <a class='shine-animate' href='blog-details.html'><img src="{{ url_for('static', filename='img/blog/blog_post03.jpg') }}" alt=""></a>
+                                <a class='post-tag' href='blog.html'>سرمایه گذاری</a>
+                            </div>
+                            <div class="blog-post-content">
+                                <h2 class="title"><a href='blog-details.html'>100 راه حل برتر برای درامد</a></h2>
+                                <div class="blog-avatar">
+                                    <div class="avatar-thumb">
+                                        <img src="{{ url_for('static', filename='img/blog/blog_avatar01.png') }}" alt="">
+                                    </div>
+                                    <div class="avatar-content">
+                                        <p>توسط <a href='blog-details.html'>علی احمدی</a></p>
+                                    </div>
+                                </div>
+                                <div class="blog-post-meta">
+                                    <ul class="list-wrap">
+                                        <li>
+                                            <a class='btn' href='blog-details.html'>مطالعه بیشتر</a>
+                                        </li>
+                                        <li><i class="fas fa-calendar-alt"></i>21 مهر 1403</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-shape-wrap">
+                <img src="{{ url_for('static', filename='img/images/blog_shape01.png') }}" alt="" data-aos="fade-right" data-aos-delay="400">
+                <img src="{{ url_for('static', filename='img/images/blog_shape02.png') }}" alt="" data-aos="fade-left" data-aos-delay="400">
+            </div>
+        </section>
+        <section class="call-back-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="call-back-content">
+                            <div class="section-title white-title mb-10 tg-heading-subheading animation-style3">
+                                <h2 class="title ">درخواست پشتیبانی</h2>
+                            </div>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+                            <div class="shape">
+                                <img src="{{ url_for('static', filename='img/images/call_back_shape.png') }}" alt="" data-aos="fade-right" data-aos-delay="400">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="call-back-form">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <input type="text" placeholder="نام *">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <input type="email" placeholder="ایمیل *">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <input type="number" placeholder="شماره تماس *">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn">ارسال</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-area">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="footer-widget">
+                                <div class="fw-logo mb-25">
+                                    <a href=""><img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="Logo"></a>
+                                </div>
+                                <div class="footer-content">
+                                    <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.</p>
+                                    <div class="footer-social">
+                                        <ul class="list-wrap">
+                                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer-widget">
+                                <h4 class="fw-title">اطلاعات</h4>
+                                <div class="footer-info-list">
+                                    <ul class="list-wrap">
+                                        <li>
+                                            <div class="icon">
+                                                <i class="flaticon-phone-call"></i>
+                                            </div>
+                                            <div class="content">
+                                                <a href="tel:0123456789">+989122187891</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <i class="flaticon-envelope"></i>
+                                            </div>
+                                            <div class="content">
+                                                <a href="mailto:info@test.com">siamak.rahi@yahoo.com</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <i class="flaticon-pin"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p> تهران پلاک یک </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer-widget">
+                                <h4 class="fw-title">دسترسی سریع</h4>
+                                <div class="footer-link-list">
+                                    <ul class="list-wrap">
+                                        <li><a href="about.html">درباره ما</a></li>
+                                        <li><a href="contact.html">شرکای ما</a></li>
+                                        <li><a href="contact.html">توصیفات</a></li>
+                                        <li><a href="contact.html">مطالعات ما</a></li>
+                                        <li><a href="contact.html">قیمت گذاری</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="footer-widget">
+                                <h4 class="fw-title">پست‌های اینستاگرام</h4>
+                                <div class="footer-instagram">
+                                    <ul class="list-wrap">
+                                        <li><a href="javascript:void(0)"><img src="{{ url_for('static', filename='img/images/footer_insta01.jpg') }}" alt="Instagram Post 01"></a></li>
+                                        <li><a href="javascript:void(0)"><img src="{{ url_for('static', filename='img/images/footer_insta02.jpg') }}" alt="Instagram Post 02"></a></li>
+                                        <li><a href="javascript:void(0)"><img src="{{ url_for('static', filename='img/images/footer_insta03.jpg') }}" alt="Instagram Post 03"></a></li>
+                                        <li><a href="javascript:void(0)"><img src="{{ url_for('static', filename='img/images/footer_insta04.jpg') }}" alt="Instagram Post 04"></a></li>
+                                        <li><a href="javascript:void(0)"><img src="{{ url_for('static', filename='img/images/footer_insta05.jpg') }}" alt="Instagram Post 05"></a></li>
+                                        <li><a href="javascript:void(0)"><img src="{{ url_for('static', filename='img/images/footer_insta06.jpg') }}" alt="Instagram Post 06"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 order-0 order-lg-2">
+                            <div class="footer-newsletter">
+                                <h4 class="title">عضویت در خبرنامه</h4>
+                                <form action="#">
+                                    <input type="text" placeholder="ایمیل خود را وارد کنید ...">
+                                    <button class="btn btn-two" type="submit">عضویت</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="copyright-text">
+                                <p>  صفحات ساخته شده توسط سیامک راهی </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-shape">
+                <img src="{{ url_for('static', filename='img/images/footer_shape01.png') }}" alt="Footer Shape 01" data-aos="fade-right" data-aos-delay="400">
+                <img src="{{ url_for('static', filename='img/images/footer_shape02.png') }}" alt="Footer Shape 02" data-aos="fade-left" data-aos-delay="400">
+                <img src="{{ url_for('static', filename='img/images/footer_shape03.png') }}" alt="Footer Shape 03" data-parallax='{"x": 100, "y": -100 }'>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/vendor/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.odometer.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.appear.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gsap.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ScrollTrigger.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/SplitText.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gsap-animation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.parallaxScroll.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/swiper-bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ajax-form.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+    const text = document.querySelector('.circle');
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+    const element = document.querySelectorAll('.circle span');
+    for (let i = 0; i < element.length; i++) {
+        element[i].style.transform = "rotate(" + i * 17 + "deg)"
+    }
+    </script>
+
+       
+</body>
+</html>
