@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %} 
+<main class="fix">
+    <section class="breadcrumb__area breadcrumb__bg" data-background="{{ url_for('static', filename='img/bg/breadcrumb_bg.jpg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="breadcrumb__content">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href=''>خانه</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">پروفایل کاربری</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb__shape">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape01.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape02.png') }}" alt="" class="rightToLeft">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape03.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape04.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape05.png') }}" alt="" class="alltuchtopdown">
+        </div>
+    </section>
+    <section>
+    <div class="container">    
+        <div class="container">
+            <div class="profile-content">
+                <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Profile Picture">
+                <div class="profile-details">
+                    <h2>شناسه:{{ session['user_id'] }}</h2>
+                    <h2>نام:{{ session['user_name'] }}</h2>
+                    <h2>نام:{{ session['user_first_name'] }}</h2>
+                    <h2>نام خانوادگی:{{ session['user_last_name'] }}</h2>
+                    <h2>ایمیل:{{ session['user_email'] }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+</main>
+{% endblock %}

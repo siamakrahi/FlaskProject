@@ -1,11 +1,260 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>welcome to team</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %} 
+<main class="fix">
+    <section class="breadcrumb__area breadcrumb__bg" data-background="{{ url_for('static', filename='img/bg/breadcrumb_bg.jpg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="breadcrumb__content">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href=''>خانه</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">تیم ما</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb__shape">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape01.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape02.png') }}" alt="" class="rightToLeft">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape03.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape04.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape05.') }}" alt="" class="alltuchtopdown">
+        </div>
+    </section>
+    <section class="team-area pt-120 pb-90">
+        <div class="container">
+            <div class="team-item-wrap">
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <img src="{{ url_for('static', filename='img/team/team_img01.jpg') }}" alt="">
+                                <div class="team-social">
+                                    <div class="social-toggle-icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <ul class="list-wrap">
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h4 class="title"><a href='team-details.html'>جون کوپر</a></h4>
+                                <span>مشاور مالی</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <img src="{{ url_for('static', filename='img/team/team_img02.jpg') }}" alt="">
+                                <div class="team-social">
+                                    <div class="social-toggle-icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <ul class="list-wrap">
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h4 class="title"><a href='team-details.html'>ایلنور پنا</a></h4>
+                                <span>مشاور مالی</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <img src="{{ url_for('static', filename='img/team/team_img03.jpg') }}" alt="">
+                                <div class="team-social">
+                                    <div class="social-toggle-icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <ul class="list-wrap">
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h4 class="title"><a href='team-details.html'>فلوید مایلز</a></h4>
+                                <span>مشاور مالی</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <img src="{{ url_for('static', filename='img/team/team_img04.jpg') }}" alt="">
+                                <div class="team-social">
+                                    <div class="social-toggle-icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <ul class="list-wrap">
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h4 class="title"><a href='team-details.html'>رالف ادواردز</a></h4>
+                                <span>مشاور مالی</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <img src="{{ url_for('static', filename='img/team/team_img05.jpg') }}" alt="">
+                                <div class="team-social">
+                                    <div class="social-toggle-icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <ul class="list-wrap">
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h4 class="title"><a href='team-details.html'>ژنی آکوره</a></h4>
+                                <span>مشاور مالی</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <img src="{{ url_for('static', filename='img/team/team_img06.jpg') }}" alt="">
+                                <div class="team-social">
+                                    <div class="social-toggle-icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <ul class="list-wrap">
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h4 class="title"><a href='team-details.html'>لئو بتنمن</a></h4>
+                                <span>مشاور مالی</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <img src="{{ url_for('static', filename='img/team/team_img07.jpg') }}" alt="">
+                                <div class="team-social">
+                                    <div class="social-toggle-icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <ul class="list-wrap">
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h4 class="title"><a href='team-details.html'>دیلا جونیور</a></h4>
+                                <span>مشاور مالی</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <img src="{{ url_for('static', filename='img/team/team_img08.jpg') }}" alt="">
+                                <div class="team-social">
+                                    <div class="social-toggle-icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                    <ul class="list-wrap">
+                                        <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h4 class="title"><a href='team-details.html'>کیانت جبرا</a></h4>
+                                <span>مشاور مالی</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="brand__area-six">
+        <div class="container">
+            <div class="swiper-container brand-active">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img01.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img02.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img03.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img04.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img05.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img06.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img03.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

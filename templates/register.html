@@ -1,11 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>welcome to register</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %} 
+<main class="fix">
+    <section class="register__area-one">
+        <div class="container">
+            <div class="text-center mb-55">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 class="text-48-bold">ایجاد حساب کاربری</h1>
+            </div>
+            <div class="box-form-login">
+                <div class="head-login">
+                    <h3>ثبت نام</h3>
+                    <p>امروز یک حساب کاربری ایجاد کنید و استفاده از پلتفرم ما را شروع کنید</p>
+                    <form class="form-login" method="POST" action="{{ url_for('create_user') }}">
+                        <div class="form-group">
+                            <input type="text" name="first_name" class="form-control account" placeholder="نام" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="last_name" class="form-control account" placeholder="نام خانوادگی" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control email-address" placeholder="ایمیل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="رمزعبور" required>
+                            <span class="view-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="confirm_password" class="form-control" placeholder="تکرار رمز عبور" required>
+                            <span class="view-password"></span>
+                        </div>
+                        <div class="box-forgot-pass">
+                            <label>
+                                <input type="checkbox" class="cb-remember" value="1" required> <span>من شرایط و ضوابط و خط مشی رازداری این وب سایت را خوانده و موافقم.</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-login" value="ثبت نام">
+                        </div>
+                        <p>حساب کاربری دارید؟ <a class="link-bold" href="{{ url_for('login_user') }}">وارد</a> شوید</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

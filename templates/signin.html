@@ -1,11 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>welcome to signin</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %} 
+
+<main class="fix">
+    <section class="login__area-one">
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="text-center mb-55">
+                <h1 class="text-48-bold">خوش آمدید !</h1>
+            </div>
+            <div class="box-form-login">
+                <div class="head-login">
+                    <h3>ورود</h3>
+                    <p>با ایمیل و رمز ورود خود وارد شوید</p>
+                    <form class="form-login" method="POST" action="{{ url_for('login_user') }}">
+                        <div class="form-group">
+                            <input type="text" name="email" class="form-control account" placeholder="آدرس ایمیل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="رمز عبور" required>
+                            <span class="view-password"></span>
+                        </div>
+                        <div class="box-forgot-pass">
+                            <label>
+                                <input type="checkbox" class="cb-remember" value="1"> یادآوری
+                            </label>
+                            <a href="forgot-password.html">رمز عبور خود را فراموش کردید؟</a>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-login" value="ورود">
+                        </div>
+                        <p>حساب کاربری ندارید؟ <a class="link-bold" href="{{ url_for('register_page') }}">ثبت نام</a> کنید</p>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

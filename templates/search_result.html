@@ -1,0 +1,26 @@
+<!-- search_results.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>نتایج جستجو</h1>
+    {% if query %}
+        <p>نتایج برای "{{ query }}" : </p>
+        <ul>
+            {% for result in results %}
+                <li>{{ result.title }}</li>
+            {% endfor %}
+        </ul>
+        {% if not results %}
+            <p>هیچ نتیجه‌ای یافت نشد.</p>
+        {% endif %}
+    {% else %}
+        <p>لطفاً یک کلمه جستجو وارد کنید.</p>
+    {% endif %}
+{% endblock %}
+
+
+
+
+
+
+

@@ -1,11 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>welcome to contact</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %} 
+<main class="fix">
+    <section class="breadcrumb__area breadcrumb__bg" data-background="{{ url_for ('static', filename='img/bg/breadcrumb_bg.jpg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="breadcrumb__content">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href=''>خانه</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">تماس با ما</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb__shape">
+            <img src="{{ url_for ('static', filename='img/images/breadcrumb_shape01.png') }}" alt="">
+            <img src="{{ url_for ('static', filename='img/images/breadcrumb_shape02.png') }}" alt="" class="rightToLeft">
+            <img src="{{ url_for ('static', filename='img/images/breadcrumb_shape03.png') }}" alt="">
+            <img src="{{ url_for ('static', filename='img/images/breadcrumb_shape04.png') }}" alt="">
+            <img src="{{ url_for ('static', filename='img/images/breadcrumb_shape05.png') }}" alt="" class="alltuchtopdown">
+        </div>
+    </section>
+    <section class="contact__area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.332792000835!2d144.96011341744386!3d-37.805673299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sbd!4v1685027435635!5m2!1sen!2sbd" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="contact__content">
+                        <div class="section-title mb-35">
+                            <h2 class="title">چگونه میتوانیم کمک کنیم؟</h2>
+                            <p>هنگامی که یک چاپگر ناشناخته یک نوع از نوع را گرفت و آن را تقلا کرد تا از نوع استفاده کند.این نه تنها از پنج نوع  زنده مانده است که اساساً بدون تغییر است</p>
+                        </div>
+                        <div class="contact__info">
+                            <ul class="list-wrap">
+                                <li>
+                                    <div class="icon">
+                                        <i class="flaticon-pin"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">نشانی</h4>
+                                        <p>تهران پلاک یک</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="flaticon-phone-call"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">تلفن</h4>
+                                        <a href="tel:0123456789">+989122187891</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="flaticon-mail"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title">پست الکترونیک</h4>
+                                        <a href="mailto:info@gmail.com">siamak.rahi@yahoo.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact__form-wrap">
+                        <h2 class="title">ارسال پیام</h2>
+                        <p>آدرس ایمیل شما نمایش داده نخواهد شد *</p>
+                        <form id="contact-form" action="assets/mail.php" method="POST">
+                            <div class="form-grp">
+                                <textarea name="message" placeholder="پیام شما"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-grp">
+                                        <input type="text" name="name" placeholder="نام">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-grp">
+                                        <input type="email" name="email" placeholder="ایمیل">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-grp">
+                                        <input type="number" name="phone" placeholder="شماره تماس">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-grp checkbox-grp">
+                                <input type="checkbox" name="checkbox" id="checkbox">
+                                <label for="checkbox">نام ، ایمیل و وب سایت من را در این مرورگر ذخیره کنید برای دفعه بعد که نظر می دهم.</label>
+                            </div>
+                            <button type="submit" class="btn">ارسال پیام</button>
+                        </form>
+                        <p class="ajax-response mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="call-back-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="call-back-content">
+                        <div class="section-title white-title mb-10">
+                            <h2 class="title">درخواست مشاوره</h2>
+                        </div>
+                        <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری.</p>
+                        <div class="shape">
+                            <img src="{{ url_for ('static', filename='img/images/call_back_shape.png') }}" alt="" data-aos="fade-right" data-aos-delay="400">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="call-back-form">
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <input type="text" placeholder="نام*">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <input type="email" placeholder="ایمیل *">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <input type="number" placeholder="شماره تماس*">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn">ارسال پیام</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

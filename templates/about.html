@@ -1,12 +1,383 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>welcome to about</h1>
-</body>
-</html>
+{% extends "base.html" %}
 
+{% block content %} 
+<main class="fix">
+    <section class="breadcrumb__area breadcrumb__bg" data-background="{{ url_for('static', filename='img/bg/breadcrumb_bg.jpg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="breadcrumb__content">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href=''>خانه</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">درباره ما</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb__shape">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape01.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape02.png') }}" alt="" class="rightToLeft">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape03.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape04.png') }}" alt="">
+            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape05.png') }}" alt="" class="alltuchtopdown">
+        </div>
+    </section>
+    <section class="about__area-four">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6 col-md-9 col-sm-10">
+                    <div class="about__img-wrap-four">
+                        <img src="{{ url_for('static', filename='img/images/inner_about01.jpg') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/images/inner_about02.jpg') }}" alt="">
+                        <div class="about__award-box">
+                            <div class="icon">
+                                <i class="flaticon-trophy"></i>
+                            </div>
+                            <div class="content">
+                                <h2 class="title">15+</h2>
+                                <p>برترین آژانس های طراحی <br> سایت با المنتور</p>
+                            </div>
+                        </div>
+                        <div class="shape">
+                            <img src="{{ url_for('static', filename='img/images/inner_about_shape.jpg') }}" alt="" class="alltuchtopdown">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__content-four">
+                        <div class="section-title mb-30">
+                            <span class="sub-title">به سادگی بدانید</span>
+                            <h2 class="title">ما به سازمانها کمک می کنیم تا مشاغل نهایی رشد کنند</h2>
+                        </div>
+                        <div class="about__content-inner-three">
+                            <div class="about__list-box">
+                                <ul class="list-wrap">
+                                    <li><i class="flaticon-arrow-button"></i>مدیریت و تحلیل رقبا</li>
+                                    <li><i class="flaticon-arrow-button"></i>تجزیه و تحلیل و تحقیق</li>
+                                    <li><i class="flaticon-arrow-button"></i>100 ٪ سرمایه خود را پس انداز کنید</li>
+                                </ul>
+                            </div>
+                            <div class="about__list-img-two">
+                                <img src="assets/img/images/about_list_img02.png" alt="">
+                            </div>
+                        </div>
+                        <p>ما با موفقیت با وظایف مختلف پیچیدگی های مختلف تضمین های اصطلاحات طولانی مدت مقابله می کنیم و به طور مرتب تسلط بر روی منطقه جدید تمرین فنلی Ogiesour شامل ده ها نفر</p>
+                        <a class='btn' href='contact.html'>تماس با ما</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="brand__area-four">
+        <div class="container">
+            <div class="swiper-container brand-active">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img01.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img02.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img03.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img04.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img05.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img06.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-item">
+                            <img src="{{ url_for('static', filename='img/brand/brand_img03.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="choose__area-four">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="choose__content-four">
+                        <div class="section-title white-title mb-20">
+                            <span class="sub-title">چرا ما بهترینیم</span>
+                            <h2 class="title">راه حل های دیجیتال برای تجارت آنلاین شما</h2>
+                        </div>
+                        <p>ما با موفقیت با وظایف پیچیدگی مختلف کنار می آییم ، تضمین های طولانی مدت را فراهم می کنیم و به طور مرتب تسلط جدید را به دنبال Gies Heur تسلط می دهیم.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="choose__list-two">
+                        <ul class="list-wrap">
+                            <li>
+                                <div class="choose__list-box-two">
+                                    <div class="choose__list-icon-two">
+                                        <i class="flaticon-investment"></i>
+                                    </div>
+                                    <div class="choose__list-content-two">
+                                        <h4 class="title">راه حل های تجاری</h4>
+                                        <p>کتابهای زیادی در شصت و سه درصد گذشته.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="choose__list-box-two">
+                                    <div class="choose__list-icon-two">
+                                        <i class="flaticon-financial-profit"></i>
+                                    </div>
+                                    <div class="choose__list-content-two">
+                                        <h4 class="title">برنامه ریزی مالی</h4>
+                                        <p>کتابهای زیادی در شصت و سه درصد گذشته.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="choose__list-box-two">
+                                    <div class="choose__list-icon-two">
+                                        <i class="flaticon-investment-1"></i>
+                                    </div>
+                                    <div class="choose__list-content-two">
+                                        <h4 class="title">تحلیل بازار</h4>
+                                        <p>کتابهای زیادی در شصت و سه درصد گذشته.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="choose__list-box-two">
+                                    <div class="choose__list-icon-two">
+                                        <i class="flaticon-report"></i>
+                                    </div>
+                                    <div class="choose__list-content-two">
+                                        <h4 class="title">راه حل های تجاری</h4>
+                                        <p>کتابهای زیادی در شصت و سه درصد گذشته.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="choose__shape-wrap-four">
+            <img src="{{ url_for('static', filename='img/images/inner_choose_shape01.png') }}" alt="" data-aos="fade-right" data-aos-delay="400">
+            <img src="{{ url_for('static', filename='img/images/inner_choose_shape02.png') }}" alt="" data-aos="fade-left" data-aos-delay="400">
+        </div>
+    </section>
+    <section class="counter-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="counter-item">
+                        <div class="icon">
+                            <i class="flaticon-trophy"></i>
+                        </div>
+                        <div class="content">
+                            <h2 class="count"><span class="odometer" data-count="45"></span>+</h2>
+                            <p>موفقیت <br> پروژه های تکمیل شده</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="counter-item">
+                        <div class="icon">
+                            <i class="flaticon-happy"></i>
+                        </div>
+                        <div class="content">
+                            <h2 class="count"><span class="odometer" data-count="92"></span>K</h2>
+                            <p>رضایت<br> 100% مشتریان راضی</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="counter-item">
+                        <div class="icon">
+                            <i class="flaticon-china"></i>
+                        </div>
+                        <div class="content">
+                            <h2 class="count"><span class="odometer" data-count="19"></span>+</h2>
+                            <p>درجهان <br> فعالیت داریم</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="counter-item">
+                        <div class="icon">
+                            <i class="flaticon-time"></i>
+                        </div>
+                        <div class="content">
+                            <h2 class="count"><span class="odometer" data-count="25"></span>+</h2>
+                            <p>سالهای فعالیت <br> به قدمت تاریخ استواریم</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="counter-shape-wrap">
+            <img src="{{ url_for('static', filename='img/images/counter_shape01.png') }}" alt="" data-aos="fade-right" data-aos-delay="400">
+            <img src="{{ url_for('static', filename='img/images/counter_shape02.png') }}" alt="" data-parallax='{"x" : 100 , "y" : -100 }'>
+            <img src="{{ url_for('static', filename='img/images/counter_shape03.png') }}" alt="" data-aos="fade-left" data-aos-delay="400">
+        </div>
+    </section>
+    <section class="team__area-four">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title text-center mb-40">
+                        <span class="sub-title">با تیم ما آشنا شوید</span>
+                        <h2 class="title">تخصص کسب و کار اینجاست <br> برای شما تا بتوانید اعتماد کنید</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                    <div class="team__item-four shine-animate-item">
+                        <div class="team__thumb-four shine-animate">
+                            <img src="{{ url_for('static', filename='img/team/h4_team_img01.jpg') }}" alt="">
+                        </div>
+                        <div class="team__content-four">
+                            <h2 class="title"><a href='team-details.html'>فلوید مایلز</a></h2>
+                            <span>مشاور مالی</span>
+                            <div class="team__social-four">
+                                <ul class="list-wrap">
+                                    <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                    <div class="team__item-four shine-animate-item">
+                        <div class="team__thumb-four shine-animate">
+                            <img src="{{ url_for('static', filename='img/team/h4_team_img02.jpg') }}" alt="">
+                        </div>
+                        <div class="team__content-four">
+                            <h2 class="title"><a href='team-details.html'>رالف ادواردز</a></h2>
+                            <span>مشاور مالی</span>
+                            <div class="team__social-four">
+                                <ul class="list-wrap">
+                                    <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                    <div class="team__item-four shine-animate-item">
+                        <div class="team__thumb-four shine-animate">
+                            <img src="{{ url_for('static', filename='img/team/h4_team_img03.jpg') }}" alt="">
+                        </div>
+                        <div class="team__content-four">
+                            <h2 class="title"><a href='team-details.html'>ایلنور پنا</a></h2>
+                            <span>مشاور مالی</span>
+                            <div class="team__social-four">
+                                <ul class="list-wrap">
+                                    <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                    <div class="team__item-four shine-animate-item">
+                        <div class="team__thumb-four shine-animate">
+                            <img src="{{ url_for('static', filename='img/team/h4_team_img04.jpg') }}" alt="">
+                        </div>
+                        <div class="team__content-four">
+                            <h2 class="title"><a href='team-details.html'>جون کوپر</a></h2>
+                            <span>مشاور مالی</span>
+                            <div class="team__social-four">
+                                <ul class="list-wrap">
+                                    <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-pinterest-p"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="call-back-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="call-back-content">
+                        <div class="section-title white-title mb-10">
+                            <h2 class="title">درخواست مشاوره</h2>
+                        </div>
+                        <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری.</p>
+                        <div class="shape">
+                            <img src="{{ url_for('static', filename='img/images/call_back_shape.png') }}" alt="" data-aos="fade-right" data-aos-delay="400">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="call-back-form">
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <input type="text" placeholder="نام*">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <input type="email" placeholder="ایمیل *">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <input type="number" placeholder="شماره تماس*">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn">ارسال پیام</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

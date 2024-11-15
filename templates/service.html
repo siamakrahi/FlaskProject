@@ -1,11 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>welcome to service</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %} 
+<main class="fix">
+    <section class="breadcrumb__area breadcrumb__bg" data-background="{{ url_for ('static', filename= 'img/bg/breadcrumb_bg.jpg' ) }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="breadcrumb__content">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href=''>خانه</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">خدمات ما</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb__shape">
+            <img src="{{ url_for ('static', filename= 'img/images/breadcrumb_shape01.png' ) }}" alt="">
+            <img src="{{ url_for ('static', filename= 'img/images/breadcrumb_shape02.png' ) }}" alt="" class="rightToLeft">
+            <img src="{{ url_for ('static', filename= 'img/images/breadcrumb_shape03.png' ) }}" alt="">
+            <img src="{{ url_for ('static', filename= 'img/images/breadcrumb_shape04.png' ) }}" alt="">
+            <img src="{{ url_for ('static', filename= 'img/images/breadcrumb_shape05.png' ) }}" alt="" class="alltuchtopdown">
+        </div>
+    </section>
+    <section class="services__area-five services__bg-five" data-background="{{ url_for ('static', filename= 'img/bg/inner_services_bg02.jpg' ) }}">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8">
+                    <div class="section-title text-center mb-40">
+                        <span class="sub-title">خدمات ما چگونه است</span>
+                        <h2 class="title">خدمات ما برپایه رضایت مشتری است</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="services-item-wrap">
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="services-item shine-animate-item">
+                            <div class="services-thumb">
+                                <a class='shine-animate' href='services-details.html'><img src="{{ url_for ('static', filename= 'img/services/services_img01.jpg' ) }}" alt=""></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="icon">
+                                    <i class="flaticon-profit"></i>
+                                </div>
+                                <h4 class="title"><a href="service-details.html">بازاریابی استراتژیک</a></h4>
+                                <p>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ.</p>
+                                <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="services-item shine-animate-item">
+                            <div class="services-thumb">
+                                <a class='shine-animate' href='services-details.html'><img src="{{ url_for ('static', filename= 'img/services/services_img02.jpg' ) }}" alt=""></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="icon">
+                                    <i class="flaticon-investment-1"></i>
+                                </div>
+                                <h4 class="title"><a href="service-details.html">برنامه ریزی سرمایه گذاری</a></h4>
+                                <p>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ.</p>
+                                <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="services-item shine-animate-item">
+                            <div class="services-thumb">
+                                <a class='shine-animate' href='services-details.html'><img src="{{ url_for ('static', filename= 'img/services/services_img03.jpg' ) }}" alt=""></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="icon">
+                                    <i class="flaticon-pie-chart"></i>
+                                </div>
+                                <h4 class="title"><a href="service-details.html">بینش و تجزیه و تحلیل</a></h4>
+                                <p>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ.</p>
+                                <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="services-item shine-animate-item">
+                            <div class="services-thumb">
+                                <a class='shine-animate' href='services-details.html'><img src="{{ url_for ('static', filename= 'img/services/services_img04.jpg' ) }}" alt=""></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="icon">
+                                    <i class="flaticon-light-bulb"></i>
+                                </div>
+                                <h4 class="title"><a href="service-details.html">مشاوره کسب و کار</a></h4>
+                                <p>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ.</p>
+                                <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="services-item shine-animate-item">
+                            <div class="services-thumb">
+                                <a class='shine-animate' href='services-details.html'><img src="{{ url_for ('static', filename= 'img/services/services_img05.jpg' ) }}" alt=""></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="icon">
+                                    <i class="flaticon-investment"></i>
+                                </div>
+                                <h4 class="title"><a href="service-details.html">توسعه تجاری</a></h4>
+                                <p>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ.</p>
+                                <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                            </div>
+                        </div>' ) }}
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="services-item shine-animate-item">
+                            <div class="services-thumb">
+                                <a class='shine-animate' href='services-details.html'><img src="{{ url_for ('static', filename= 'img/services/services_img06.jpg' ) }}" alt=""></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="icon">
+                                    <i class="flaticon-piggy-bank"></i>
+                                </div>
+                                <h4 class="title"><a href="service-details.html">حسابرسی مالیاتی</a></h4>
+                                <p>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ.</p>
+                                <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="services-item shine-animate-item">
+                            <div class="services-thumb">
+                                <a class='shine-animate' href='services-details.html'><img src="{{ url_for ('static', filename= 'img/services/services_img07.jpg' ) }}" alt=""></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="icon">
+                                    <i class="flaticon-financial-profit"></i>
+                                </div>
+                                <h4 class="title"><a href="service-details.html">رشد مالی</a></h4>
+                                <p>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ.</p>
+                                <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
+                        <div class="services-item shine-animate-item">
+                            <div class="services-thumb">
+                                <a class='shine-animate' href='services-details.html'><img src="{{ url_for ('static', filename= 'img/services/services_img08.jpg' ) }}" alt=""></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="icon">
+                                    <i class="flaticon-budget"></i>
+                                </div>
+                                <h4 class="title"><a href="service-details.html">محاسبه درآمد</a></h4>
+                                <p>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ.</p>
+                                <a class='btn' href='services-details.html'>مطالعه بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
