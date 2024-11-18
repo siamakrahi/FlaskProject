@@ -102,11 +102,11 @@
                                             </svg> 
                                         </a> 
 
-                                        {% if session['user_name'] %}
-                                            <li class="header-btn"><a class='btn'href="{{ url_for('profile') }}">کاربر: {{ session['user_name'] }}</a></li>
+                                        {% if session['user_id'] %}
+                                            <li class="header-btn"><a class='btn'href="{{ url_for('profile') }}">کاربر: {{ session['user_id'] }}</a></li>
                                             <li class="header-btn"><a class='btn' href="{{ url_for('logout') }}">خروج از حساب</a></li>
                                         {% else %}
-                                            <li class="header-btn"><a class='btn' href="{{ url_for('login_user') }}">ورود به حساب</a></li>
+                                            <li class="header-btn"><a class='btn' href="{{ url_for('signin_page') }}">ورود به حساب</a></li>
                                             <li class="header-btn"><a class='btn' href="{{ url_for('register_page') }}"> ثبت نام </a>
                                         {% endif %}
                                     

@@ -1,50 +1,58 @@
-{% extends "base.html" %}
-
+{% extends "base.html" %} 
 {% block content %} 
-<main class="fix">
-    <section class="breadcrumb__area breadcrumb__bg" data-background="{{ url_for('static', filename='img/bg/breadcrumb_bg.jpg') }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="breadcrumb__content">
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href=''>خانه</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">پروفایل کاربری</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="breadcrumb__shape">
-            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape01.png') }}" alt="">
-            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape02.png') }}" alt="" class="rightToLeft">
-            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape03.png') }}" alt="">
-            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape04.png') }}" alt="">
-            <img src="{{ url_for('static', filename='img/images/breadcrumb_shape05.png') }}" alt="" class="alltuchtopdown">
-        </div>
+<main class="fix"> 
+    <section class="register__area-one"> 
+        <div class="container"> 
+            <div class="text-center mb-55">   
+            </div> 
+            <div class="box-form-login">
+                <h1 class="text-48-bold">اطلاعات حساب کاربری</h1> 
+                <div class="head-login"> 
+                    <p> شماره کاربری: {{ user.id }} </p>
+                    <p>نام: {{ user.fname }} </p>
+                    <p>نام خانوادگی: {{ user.lname }} </p>
+                    <p>ایمیل: {{ user.email }} </p>
+                    <p>هش رمز عبور: {{ user.password_hash }} </p>
+                </div> 
+            </div> 
+        </div> 
+    </section>    
+    <section class="register__area-one"> 
+        <div class="container"> 
+            <div class="text-center mb-55">  
+                <div class="box-form-login">
+                <h1 class="text-48-bold"> ویرایش حساب کاربری</h1>
+                <form method="POST" action="{{ url_for('update_user', user_id=user.id) }}"> 
+                    <label for="fname">نام:</label> 
+                    <input type="text" id="fname" name="fname" value="{{ user.fname }}"><br><br> 
+                
+                    <label for="lname">نام خانوادگی:</label> 
+                    <input type="text" id="lname" name="lname" value="{{ user.lname }}"><br><br> 
+                
+                    <label for="email">ایمیل:</label> 
+                    <input type="email" id="email" name="email" value="{{ user.email }}"><br><br> 
+                
+                    <label for="password">رمز عبور (برای تغییر):</label> 
+                    <input type="password" id="password" name="password"><br><br> 
+                
+                    <button type="submit" class="btn btn-danger">ویرایش شود </button> 
+                </form> 
+                </div> 
+            </div> 
+        </div> 
     </section>
-    <section>
-    <div class="container">    
-        <div class="container">
-            <div class="profile-content">
-                <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Profile Picture">
-                <div class="profile-details">
-                    <h2>شناسه:{{ session['user_id'] }}</h2>
-                    <h2>نام:{{ session['user_name'] }}</h2>
-                    <h2>نام:{{ session['user_first_name'] }}</h2>
-                    <h2>نام خانوادگی:{{ session['user_last_name'] }}</h2>
-                    <h2>ایمیل:{{ session['user_email'] }}</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+    <section class="register__area-one"> 
+        <div class="container"> 
+            <div class="text-center mb-55">  
+                <div class="box-form-login">
+                <h1 class="text-48-bold"> حذف حساب کاربری</h1>
+                <form method="POST" action="{{ url_for('delete_user', id=user.id) }}">
+                    <button type="submit" class="btn btn-danger">حذف شود </button> 
+                </form> 
+                </div> 
+            </div> 
+        </div> 
     </section>
-
-</main>
+      
+</main> 
 {% endblock %}

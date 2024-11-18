@@ -1,10 +1,12 @@
 Addons-Tkinter==0.1
 altgraph==0.17.4
+anaconda==0.0.1.1
 annotated-types==0.7.0
 anyio==4.6.2.post1
 asgiref==3.8.1
 auto-py-to-exe==2.44.1
 beautifulsoup4==4.12.3
+betterpy==0.5.0
 blinker==1.8.2
 bottle==0.12.25
 bottle-websocket==0.2.9
@@ -15,13 +17,12 @@ charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
 distlib==0.3.9
-Django==5.0.6
-django-widget-tweaks==1.5.0
 Eel==0.17.0
-Faker==26.0.0
 fastapi==0.115.2
 filelock==3.16.1
 Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Flask-WTF==1.2.2
 future==1.0.0
 gevent==24.2.1
 gevent-websocket==0.10.1
@@ -42,8 +43,8 @@ mysqlclient==2.2.4
 packaging==24.1
 peewee==3.17.6
 pefile==2024.8.26
-pillow==10.3.0
 platformdirs==4.3.6
+psycopg2==2.9.10
 pycparser==2.22
 pydantic==2.9.2
 pydantic_core==2.23.4
@@ -61,8 +62,10 @@ setuptools==74.0.0
 six==1.16.0
 sniffio==1.3.1
 soupsieve==2.6
+sql==2022.4.0
 SQLAlchemy==2.0.32
 sqlparse==0.5.0
+sqlviewer==0.1.1
 starlette==0.40.0
 tqdm==4.66.4
 typing_extensions==4.12.2
@@ -74,5 +77,6 @@ virtualenv==20.27.0
 webencodings==0.5.1
 Werkzeug==3.0.4
 whichcraft==0.6.1
+WTForms==3.2.1
 zope.event==5.0
 zope.interface==7.0.3
