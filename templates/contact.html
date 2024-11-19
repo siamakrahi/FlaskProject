@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="content">
                                         <h4 class="title">تلفن</h4>
-                                        <a href="tel:0123456789">+989122187891</a>
+                                        <a href="tel:0123456789">00989122187891</a>
                                     </div>
                                 </li>
                                 <li>
@@ -82,36 +82,33 @@
                     <div class="contact__form-wrap">
                         <h2 class="title">ارسال پیام</h2>
                         <p>آدرس ایمیل شما نمایش داده نخواهد شد *</p>
-                        <form id="contact-form" action="assets/mail.php" method="POST">
+                        <form id="contact-form" action="{{ url_for('message') }}" method="POST">
                             <div class="form-grp">
-                                <textarea name="message" placeholder="پیام شما"></textarea>
+                                <textarea name="message" placeholder="پیام شما" required></textarea>
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-grp">
-                                        <input type="text" name="name" placeholder="نام">
+                                        <input type="text" name="name" placeholder="نام" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-grp">
-                                        <input type="email" name="email" placeholder="ایمیل">
+                                        <input type="email" name="email" placeholder="ایمیل" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-grp">
-                                        <input type="number" name="phone" placeholder="شماره تماس">
+                                        <input type="number" name="phone" placeholder="شماره تماس" required>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-grp checkbox-grp">
-                                <input type="checkbox" name="checkbox" id="checkbox">
-                                <label for="checkbox">نام ، ایمیل و وب سایت من را در این مرورگر ذخیره کنید برای دفعه بعد که نظر می دهم.</label>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn">ارسال پیام</button>
                             </div>
-                            <button type="submit" class="btn">ارسال پیام</button>
                         </form>
-                        <p class="ajax-response mb-0"></p>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     </section>
@@ -131,21 +128,21 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="call-back-form">
-                        <form action="#">
+                        <form action="{{ url_for('helprequest') }}" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-grp">
-                                        <input type="text" placeholder="نام*">
+                                        <input type="text" name="name" placeholder="نام*">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-grp">
-                                        <input type="email" placeholder="ایمیل *">
+                                        <input type="email" name="email" placeholder="ایمیل *">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-grp">
-                                        <input type="number" placeholder="شماره تماس*">
+                                        <input type="number" name="phone" placeholder="شماره تماس*">
                                     </div>
                                 </div>
                                 <div class="col-md-6">

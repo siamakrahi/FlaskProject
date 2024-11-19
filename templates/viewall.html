@@ -1,0 +1,106 @@
+{% extends "base.html" %} 
+{% block content %} 
+<main>
+    <head>
+        <br><br><br>
+        <br><br><br>
+        <meta charset="UTF-8">
+        <title>پیام‌های کاربران</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border: 1px solid #ddd;
+            }
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+            tbody tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .table-container {
+                background-color: #e7f3fe;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="table-container">
+            <h1>پیام‌های کاربران</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>نام</th>
+                        <th>ایمیل</th>
+                        <th>شماره تماس</th>
+                        <th>پیام</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for message in messages %}
+                    <tr>
+                        <td>{{ message.name }}</td>
+                        <td>{{ message.email }}</td>
+                        <td>{{ message.phone }}</td>
+                        <td>{{ message.message }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h1>درخواست های پشتیبانی کاربران</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>نام</th>
+                        <th>ایمیل</th>
+                        <th>شماره تماس</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for helprequest in helprequests %}
+                    <tr>
+                        <td>{{ helprequest.name }}</td>
+                        <td>{{ helprequest.email }}</td>
+                        <td>{{ helprequest.phone }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h1> درخواست های عضویت در خبرنامه</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>نام</th>
+                        <th>ایمیل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for newsletter in newsletters %}
+                    <tr>
+                        <td>{{ newsletter.name }}</td>
+                        <td>{{ newsletter.email }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
+
+{% endblock %}

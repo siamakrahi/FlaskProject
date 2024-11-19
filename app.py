@@ -1,5 +1,9 @@
 from flask import Flask, request, redirect, url_for, render_template, session, flash, abort
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_wtf import FlaskForm
+from wtforms import StringField, TextAreaField, SubmitField, IntegerField 
+from wtforms.validators import DataRequired, Email 
+from functools import wraps
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import create_engine, text
@@ -7,12 +11,42 @@ from sqlalchemy.orm import sessionmaker
 from models import *
 import os
 
+
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 engine = sa.create_engine("sqlite:///myproject3.db")
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
+
+
+with Session() as db_session:
+    existing_admin = db_session.query(User).filter_by(email='admin@example.com').first()
+    if not existing_admin:
+        admin_user = User(
+            fname='Admin',
+            lname='User',
+            email='admin@example.com',
+            password=generate_password_hash('adminpassword'),
+            role='admin'
+        )
+        db_session.add(admin_user)
+        db_session.commit()
+
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'user_id' not in session:
+            flash('لطفاً ابتدا وارد شوید.', 'danger')
+            return redirect(url_for('login_user'))
+        with Session() as db_session:
+            user = db_session.query(User).get(session['user_id'])
+            if user.role != 'admin':
+                flash('شما دسترسی به این صفحه ندارید.', 'danger')
+                return redirect(url_for('home'))
+        return f(*args, **kwargs)
+    return decorated_function
+
 
 @app.route('/create_user', methods=['POST', 'GET'])
 def create_user(): 
@@ -24,12 +58,19 @@ def create_user():
             password = request.form.get('password')
             if not all([fname, lname, email, password]): 
                 flash('لطفا تمام فیلدها را پر کنید.', 'error') 
-                return render_template('register_page.html') 
+                return render_template('register_page.html')
+            
+            with Session() as db_session: 
+                existing_user = db_session.query(User).filter_by(email=email).first() 
+                if existing_user: 
+                    flash('کاربری با این ایمیل قبلاً ثبت شده است.', 'danger') 
+                    return render_template('register_page.html' )
+                
             hashed_password = generate_password_hash(password) 
             new_user = User(fname=fname, lname=lname, email=email, password=hashed_password) 
-            with Session() as db_session: 
-                db_session.add(new_user) 
-                db_session.commit()
+            db_session.add(new_user) 
+            db_session.commit()
+
             flash('کاربر با موفقیت ثبت شد', 'success') 
             return redirect(url_for('login_user')) 
         except Exception as e:
@@ -52,6 +93,7 @@ def login_user():
                 user = db_session.query(User).filter_by(email=email).first() 
                 if user and check_password_hash(user.password, password): 
                     session['user_id'] = user.id 
+                    session['role'] = user.role
                     flash(f'خوش آمدید {user.fname}!', 'success') 
                     return redirect(url_for('profile'))
                 else: 
@@ -112,7 +154,7 @@ def delete_user(id):
                 session.pop('user_id', None) 
                 session.pop('user_name', None) 
                 flash('حساب کاربری با موفقیت حذف شد.', 'success') 
-                return redirect(url_for('login_user')) 
+                return render_template('success_page.html')
             else: 
                 flash('کاربری با این شناسه یافت نشد.', 'error') 
                 return redirect(url_for('login_user')) 
@@ -138,7 +180,7 @@ def error():
 @app.route('/profile') 
 def profile(): 
     if 'user_id' not in session: 
-        return redirect(url_for('login')) 
+        return redirect(url_for('login_user')) 
     with Session() as db_session: 
         user = db_session.query(User).get(session['user_id']) 
     if user: 
@@ -158,10 +200,6 @@ def about():
 def blog():
     return render_template('blog.html')
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
-
 @app.route('/service')
 def service():
     return render_template('service.html')
@@ -169,6 +207,70 @@ def service():
 @app.route('/team')
 def team():
     return render_template('team.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/message', methods=['POST', 'GET']) 
+def message(): 
+    if request.method == 'POST': 
+        name = request.form['name'] 
+        email = request.form['email'] 
+        phone = request.form['phone'] 
+        message = request.form['message'] 
+
+        new_message = Message(name=name, email=email, phone=phone, message=message) 
+        with Session() as db_session: 
+            db_session.add(new_message) 
+            db_session.commit()
+
+        flash('درخواست شما با موفقیت ارسال شد!', 'success') 
+        return render_template('success_page.html')
+    return render_template('index.html')
+
+@app.route('/helprequest', methods=['POST', 'GET']) 
+def helprequest(): 
+    if request.method == 'POST': 
+        name = request.form['name'] 
+        email = request.form['email'] 
+        phone = request.form['phone'] 
+
+        new_helprequest = HelpRequest(name=name, email=email, phone=phone) 
+        with Session() as db_session: 
+            db_session.add(new_helprequest) 
+            db_session.commit()
+
+        flash('درخواست شما با موفقیت ارسال شد!', 'success') 
+        return render_template('success_page.html')
+    return render_template('index.html')
+
+@app.route('/newsletter', methods=['POST', 'GET']) 
+def newsletter(): 
+    if request.method == 'POST': 
+        email = request.form['email'] 
+        new_newsletter = Newsletter(email=email,) 
+        with Session() as db_session: 
+            db_session.add(new_newsletter) 
+            db_session.commit()
+
+        flash('درخواست شما با موفقیت ارسال شد!', 'success') 
+        return render_template('success_page.html')
+    return render_template('index.html')
+
+@app.route('/viewall')
+@admin_required
+def viewall():
+    with Session() as db_session:
+        messages = db_session.query(Message).all()
+        newsletters = db_session.query(Newsletter).all()
+        helprequests = db_session.query(HelpRequest).all()
+    return render_template('viewall.html', messages=messages, newsletters=newsletters, helprequests=helprequests)
+
+
+@app.route('/success_page')
+def success_page():
+    return render_template('success_page.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

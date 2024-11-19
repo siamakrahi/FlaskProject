@@ -352,21 +352,21 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="call-back-form">
-                        <form action="#">
+                        <form action="{{ url_for('helprequest') }}" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-grp">
-                                        <input type="text" placeholder="نام*">
+                                        <input type="text" name="name" placeholder="نام*">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-grp">
-                                        <input type="email" placeholder="ایمیل *">
+                                        <input type="email" name="email" placeholder="ایمیل *">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-grp">
-                                        <input type="number" placeholder="شماره تماس*">
+                                        <input type="number" name="phone" placeholder="شماره تماس*">
                                     </div>
                                 </div>
                                 <div class="col-md-6">

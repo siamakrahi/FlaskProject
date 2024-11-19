@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="tg-header__top-info left-side list-wrap">
-                            <li class="ltr"><i class="flaticon-phone-call"></i><a href="tel:0123456789">+989122187891</a></li>
+                            <li class="ltr"><i class="flaticon-phone-call"></i><a href="tel:0123456789">00989122187891</a></li>
                             <li><i class="flaticon-pin"></i>تهران پلاک یک </li>
                         </ul>
                     </div>
@@ -73,7 +73,7 @@
                                     <li ><a href="{{ url_for('home') }}">خانه </a> </li>
                                     <li ><a href="{{ url_for('about') }}">درباره ما</a> </li> 
                                     <li ><a href="{{ url_for('service') }}">خدمات </a> </li> 
-                                    <li ><a href="{{ url_for('team') }}">تیم ها</a> </li> 
+                                    <li ><a href="{{ url_for('team') }}">تیم ما</a> </li> 
                                     <li ><a href="{{ url_for('blog') }}">وبلاگ</a> </li> 
                                     <li ><a href="{{ url_for('contact') }}">تماس با ما</a></li> 
                                 </ul> 
@@ -147,7 +147,7 @@
                                     <div class="contact-info"> 
                                         <ul class="list-wrap"> 
                                             <li><a href="mailto:info@test.com">siamak.rahi@yahoo.com</a></li> 
-                                            <li><a href="tel:0123456789">+989122187891</a></li> 
+                                            <li><a href="tel:0123456789">00989122187891</a></li> 
                                         </ul> 
                                     </div> 
                                     <div class="social-links"> 
@@ -215,7 +215,7 @@
                 </div>
                 <div class="contact-list mb-30" style="direction: ltr; text-align: left;">
                     <h4>شماره تماس</h4>
-                    <p>+989122187891</p>
+                    <p>00989122187891</p>
                 </div>
             </div>
             <div class="offCanvas__social-icon mt-30">
@@ -266,7 +266,7 @@
                                                 <i class="flaticon-phone-call"></i>
                                             </div>
                                             <div class="content">
-                                                <a href="tel:0123456789">+989122187891</a>
+                                                <a href="tel:0123456789">00989122187891</a>
                                             </div>
                                         </li>
                                         <li>
@@ -327,9 +327,9 @@
                         <div class="col-lg-7 order-0 order-lg-2">
                             <div class="footer-newsletter">
                                 <h4 class="title">عضویت در خبرنامه</h4>
-                                <form action="#">
-                                    <input type="text" placeholder="ایمیل خود را وارد کنید ...">
-                                    <button class="btn btn-two" type="submit">عضویت</button>
+                                <form action="{{ url_for('newsletter') }}" method="POST">
+                                    <input type="text" name="email" placeholder="ایمیل خود را وارد کنید ...">
+                                    <button type="submit" class="btn">عضویت</button>
                                 </form>
                             </div>
                         </div>
